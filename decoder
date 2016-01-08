@@ -1,0 +1,484 @@
+var KLC_KL_sz300369="HX/C6DCA4/k4MB7BAA7pTDLzvrOJAAAAATcjFzWvrWGzDsced41NzvrKLAAHAACuOw4SvjSMAAAAo9lg4vzNNTo7dexRDEwTvrpOAAcKK3CoS36vrEXOhbbFina14vjJ8Wa5etGfm4vjS8B0YJTMn2xvj5m5KBwIgXU6vrbhwJ/u7QQJKzvrR50CqPGD8S27vjr9iTixd+xWEzvrLL+B11Pc8cJ6vrB8jZM7Licj58vrQcXuJu6yNn78vr7CA8I13OEt72vbj/nG8iEgdaxvjRORFvIPCw3xvjoEQTFZ3OCK4vj0AcrSWKnZv+viIuJaWU40J9viefpmS7gzt1vzpN6BARPQqTIwvqeLe2qBbt+60vjvvC5EjiHlX2vrY9EWUFFhHm79vjm+eKYEf3Vba6vbdX4BPCPXoN7vjwD5ItB3mjsI4vjr9Jy/yAc/g4vjq9yzS9FJ/p7vjD9UYephOkzT4vjAAFkl+uLEq4vji9EeVtBhx76vbTeXRLzHR4N4vjw+0ilzpeh14vjc+XrHUJ4g39vjT+TKCBCRawW4SvjE94jgyY8304vjO/FzNcpGRE4Tvj67uBp40O7L9viUggAJa6Pswvqb/Tfr2X7E/zvaynS8w78l8valxrJ3RvY9viJel5uxCSKzvz92T7L+1gt3Fwvq7OdCAEMfj5+vrywEHuZH5qM9vifHqA1oc1t0vrl9BRER/OUMM+viERRyo7t/0+viGQOGhGtoE+Tvr7XzGTmI2qHwvaeHge4YPd0+vixmS8BZxx5wvq9+Ulp5F1Z/+vr6GPKVZX74TwvqjgMFSJwLa+9viVoXVuoPM59viLPlhyjWZH+viPAZLhKHFJwvag3hQwJOgpwva9eBP+gDL52vrFD8HANFOVzGxvjwOj4hiIyog4vj8BEEPOntEG9vje/PMDQWBbVH+viwXQzSD7go9viAx2oGh/bL+vrLZ8bq7AWUP4kSJfMwmgpXMQc3virtsNYSidUwSvqvmB+y1jGh5wva5YTE5CUF19viG3OtDRE/22vrDA+cAWEYMtEwvqUWFiazx9s7wvqPXYk5QeOHB7viFQKXNekSyyvio7vxHmQz9vi4Hf9US4FZ6vqK9fdfrTFF0viB27/HqAo3vieCKLBPfci0vrW/KpBhTHYHZwvqNPW2JWKZL99viQgspv7F3G+vi73MLpkZEowvq2XerZbzNeEzRuHCvrlJAAAAABqj2nW/riKAAAAIMOQlLAAhLr0kBhUflugykmULh4w6BxSQpBTMc6QG/M5bre46+AFpbaBWjz3RBpsBRK5meQLWrRJfFcE7SwOWAURO26KOsRXKbiFmrAAwAoZ7Q2PABHA4knRqUUAhOQBHAqnAWHAvC516PSZRc+gDOVHSPIdJjK9sLJAKhRpsCjUHwiPx+0IxbCnpc0KBEUvPao2cSNPSRvNAi5gdlUoAOTY3LlNRQRfL5ZFaNQeHJD62NAq++7CAA2HTnOSQX+AwsRQ7LFwPcOLY0l1Dfe/XB4tVv3L6XiAYDXrgWR6X2AYhMjwUR6XUBAVLqC8EX06snab8tqmwKASL0NU06UIRmR6NuRJU+gHftll5E6rxIMRGhJrGqKQWXAJK1AUD5ACwny5FBIJ";	 	
+splitInputString(KLC_KL_sz300369);
+
+ 	function splitInputString(raw) 
+	{
+		var data_parts = raw.split(",");
+		var i = 0;
+		while (i < data_parts.length) {
+			var p = data_parts[i];
+			var arr = S_KLC_D(p);
+			console.log(JSON.stringify(arr));
+			++i;
+		}
+	}
+
+	function S_KLC_D(_arg1){
+			var C = undefined;
+			var z = undefined;
+			var q = undefined;
+			var h = undefined;
+			var A = undefined;
+			var i = undefined;
+			var j = undefined;
+			var w = undefined;
+			var b = undefined;
+			var s = undefined;
+			var l = undefined;
+			var p = undefined;
+			var r = undefined;
+			var f = undefined;
+			var g = undefined;
+			var t = undefined;
+			var u = undefined;
+			var e = undefined;
+			var v = undefined;
+			var c = undefined;
+			var n = _arg1;
+			var arguments = arguments;
+			var k = arguments;
+			b = 86400000;
+			s = 7657;
+			l = [];
+			p = [];
+			r = ~((3 << 30));
+			f = (1 << 30);
+			g = [0, 3, 5, 6, 9, 10, 12, 15, 17, 18, 20, 23, 24, 27, 29, 30];
+			t = Math;
+			function o(){
+				var E = undefined;
+				var D = undefined;
+				E = 0;
+				while (E < 64) {
+					p[E] = t.pow(2, E);
+					if (E < 26){
+						l[E] = x((E + 65));
+						l[(E + 26)] = x((E + 97));
+						if (E < 10){
+							l[(E + 52)] = x((E + 48));
+						};
+					};
+					E = (E + 1);
+				};
+				l.push("+", "/");
+				l = l.join("");
+				z = n.split("");
+				q = z.length;
+				E = 0;
+				while (E < q) {
+					z[E] = l.indexOf(z[E]);
+					E = (E + 1);
+				};
+				h = {};
+				C = (j = 0);
+				i = {};
+				D = B([12, 6]);
+				w = (63 ^ D[1]);
+				return ((({
+					_1479:v,
+					_136:e,
+					_200:u,
+					_139:c
+				}[("_" + D[0])]) || ( function(){
+					return ([]);
+				})));
+			};
+			var x = String.fromCharCode;
+
+			function y(_arg1){
+				return ((_arg1 === {}._));
+			};
+			function a(){
+				//var _local1:*;
+				//var _local2:*;
+				//_local1 = d();
+				//_local2 = 1;
+				//if (d()){
+				//    _local2++;
+				//} else {
+				//    return ((_local2 * ((_local1 * 2) - 1)));
+				//};
+				//unresolved jump
+				var _loc1_ = undefined;
+				var _loc2_ = undefined;
+				_loc1_=d();
+				_loc2_=1;
+				while(d())
+				{
+					_loc2_++;
+				}
+				return _loc2_*(_loc1_*2-1);
+			};
+			function d(){
+				var _local1;
+				if (C >= q){
+					return (0);
+				};
+				_local1 = (z[C] & (1 << j));
+				j++;
+				if (j >= 6){
+					j = (j - 6);
+					C++;
+				};
+				return (!(!(_local1)));
+			};
+
+			function B(_arg1, _arg2, _arg3){
+				var _local4;
+				var _local5;
+				var _local6;
+				var _local7;
+				var _local8;
+				_local5 = [];
+				_local6 = 0;
+				if (!_arg2){
+					_arg2 = [];
+				};
+				if (!_arg3){
+					_arg3 = [];
+				};
+				_local4 = 0;
+				while (_local4 < _arg1.length) {
+					_local7 = _arg1[_local4];
+					_local6 = 0;
+					if (!_local7){
+						_local5[_local4] = 0;
+					} else {
+						if (C >= q){
+							return (_local5);
+						};
+						if (_arg1[_local4] <= 0){
+							_local6 = 0;
+						} else {
+							if (_arg1[_local4] <= 30){
+								while (true) {
+									_local8 = (6 - j);
+									_local8 = (((_local8 < _local7)) ? _local8 : _local7);
+									_local6 = (_local6 | (((z[C] >> j) & ((1 << _local8) - 1)) << (_arg1[_local4] - _local7)));
+									j = (j + _local8);
+									if (j >= 6){
+										j = (j - 6);
+										C++;
+									};
+									_local7 = (_local7 - _local8);
+									if (_local7 <= 0){
+										break;
+									};
+								};
+								if (((_arg2[_local4]) && ((_local6 >= p[(_arg1[_local4] - 1)])))){
+									_local6 = (_local6 - p[_arg1[_local4]]);
+								};
+							} else {
+								_local6 = B([30, (_arg1[_local4] - 30)], [0, _arg2[_local4]]);
+								if (!_arg3[_local4]){
+									_local6 = (_local6[0] + (_local6[1] * p[30]));
+								};
+							};
+						};
+						_local5[_local4] = _local6;
+					};
+					_local4++;
+				};
+				return (_local5);
+			};
+
+			function m(_arg1){
+				var _local2;
+				var _local3;
+				var _local4;
+				if (_arg1 > 1){
+					_local2 = 0;
+				};
+				_local2 = 0;
+				while (_local2 < _arg1) {
+					h.d++;
+					_local4 = (h.d % 7);
+					if ((((_local4 == 3)) || ((_local4 == 4)))){
+						h.d = (h.d + (5 - _local4));
+					};
+					_local2++;
+				};
+				_local3 = new Date();
+				_local3.setTime(((s + h.d) * b));
+				return (_local3);
+			};
+			u =  function(){
+				var _local1;
+				var _local2;
+				var _local3;
+				var _local4;
+				var _local5;
+				var _local6;
+				if (w >= 1){
+					return ([]);
+				};
+				h.d = (B([18], [1])[0] - 1);
+				_local4 = B([3, 3, 30, 6]);
+				h.p = _local4[0];
+				h.ld = _local4[1];
+				h.cd = _local4[2];
+				h.c = _local4[3];
+				h.m = t.pow(10, h.p);
+				h.pc = (h.cd / h.m);
+				_local3 = [];
+				_local1 = 0;
+				while (true) {
+					_local5 = {d:1};
+					if (d()){
+						_local4 = B([3])[0];
+						if (_local4 == 0){
+							_local5.d = B([6])[0];
+						} else {
+							if (_local4 == 1){
+								h.d = B([18])[0];
+								_local5.d = 0;
+							} else {
+								_local5.d = _local4;
+							};
+						};
+					};
+					_local6 = {date:m(_local5.d)};
+					if (d()){
+						h.ld = (h.ld + a());
+					};
+					_local4 = B([(h.ld * 3)], [1]);
+					h.cd = (h.cd + _local4[0]);
+					_local6.close = (h.cd / h.m);
+					_local3.push(_local6);
+					if ((((C >= q)) || ((((C == (q - 1))) && (!(((h.c ^ (_local1 + 1)) & 63))))))){
+						break;
+					};
+					_local1++;
+				};
+				_local3[0].prevclose = h.pc;
+				return (_local3);
+			};
+			e =  function(){
+				var _local1;
+				var _local2;
+				var _local3;
+				var _local4;
+				var _local5;
+				var _local6;
+				var _local7;
+				var _local8;
+				var _local9;
+				var _local10;
+				var _local11;
+				if (w >= 2){
+					return ([]);
+				};
+				_local7 = [];
+				_local9 = {
+					v:"volume",
+					p:"price",
+					a:"avg_price"
+				};
+				h.d = (B([18], [1])[0] - 1);
+				_local8 = {date:m(1)};
+				_local3 = B((((w < 1)) ? [3, 3, 4, 1, 1, 1, 5] : [4, 4, 4, 1, 1, 1, 3]));
+				_local1 = 0;
+				while (_local1 < 7) {
+					h[["la", "lp", "lv", "tv", "rv", "zv", "pp"][_local1]] = _local3[_local1];
+					_local1++;
+				};
+				h.m = t.pow(10, h.pp);
+				if (w >= 1){
+					_local3 = B([3, 3]);
+					h.c = _local3[0];
+					_local3 = _local3[1];
+				} else {
+					_local3 = 5;
+					h.c = 2;
+				};
+				h.pc = B([(_local3 * 6)])[0];
+				_local8.pc = (h.pc / h.m);
+				h.cp = h.pc;
+				h.da = 0;
+				h.sa = (h.sv = 0);
+				_local1 = 0;
+				while (true) {
+					if ((((C >= q)) || ((((C == (q - 1))) && (!(((h.c ^ _local1) & 7))))))){
+						break;
+					};
+					_local5 = {};
+					_local4 = {};
+					_local10 = ((h.tv) ? d() : 1);
+					_local2 = 0;
+					while (_local2 < 3) {
+						_local11 = ["v", "p", "a"][_local2];
+						if (((_local10) ? d() : 0)){
+							_local3 = a();
+							h[("l" + _local11)] = (h[("l" + _local11)] + _local3);
+						};
+						_local6 = (((((_local11 == "v")) && (h.rv))) ? d() : 1);
+						_local3 = (B([((h[("l" + _local11)] * 3) + (((_local11 == "v")) ? (_local6 * 7) : 0))], [!(!(_local2))])[0] * ((_local6) ? 1 : 100));
+						_local4[_local11] = _local3;
+						if (_local11 == "v"){
+							if (((((!((_local5[_local9[_local11]] = _local3))) && ((_local1 < 241)))) && (((h.zv) ? !(d()) : 1)))){
+								_local4.p = 0;
+								break;
+							};
+						} else {
+							if (_local11 == "a"){
+								h.da = ((((w < 1)) ? 0 : h.da) + _local4.a);
+							};
+						};
+						_local2++;
+					};
+					h.sv = (h.sv + _local4.v);
+					_local5[_local9.p] = ((h.cp = (h.cp + _local4.p)) / h.m);
+					h.sa = (h.sa + (_local4.v * h.cp));
+					_local5[_local9.a] = ((y(_local4.a)) ? ((_local1) ? _local7[(_local1 - 1)][_local9.a] : _local5[_local9.p]) : ((h.sv) ? (((t.floor((((h.sa * (2000 / h.m)) + h.sv) / h.sv)) >> 1) + h.da) / 1000) : (_local5[_local9.p] + (h.da / 1000))));
+					_local7.push(_local5);
+					_local1++;
+				};
+				_local7[0].date = _local8.date;
+				_local7[0].prevclose = _local8.pc;
+				return (_local7);
+			};
+			v =  function(){
+				var _local1;
+				var _local2;
+				var _local3;
+				var _local4;
+				var _local5;
+				var _local6;
+				var _local7;
+				var _local8;
+				if (w >= 1){
+					return ([]);
+				};
+				h.lv = 0;
+				h.ld = 0;
+				h.cd = 0;
+				h.cv = [0, 0];
+				h.p = B([6])[0];
+				h.d = (B([18], [1])[0] - 1);
+				h.m = t.pow(10, h.p);
+				_local6 = B([3, 3]);
+				h.md = _local6[0];
+				h.mv = _local6[1];
+				_local1 = [];
+				while (true) {
+					_local6 = B([6]);
+					if (!_local6.length){
+						break;
+					};
+					_local4 = {c:_local6[0]};
+					_local5 = {};
+					_local4.d = 1;
+					if ((_local4.c & 32)){
+						while (true) {
+							_local6 = B([6])[0];
+							if ((_local6 | 16) == 63){
+								_local8 = (((_local6 & 16)) ? "x" : "u");
+								_local6 = B([3, 3]);
+								_local4[(_local8 + "_d")] = (_local6[0] + h.md);
+								_local4[(_local8 + "_v")] = (_local6[1] + h.mv);
+								break;
+							};
+							if ((_local6 & 32)){
+								_local7 = (((_local6 & 8)) ? "d" : "v");
+								_local8 = (((_local6 & 16)) ? "x" : "u");
+								_local4[((_local8 + "_") + _local7)] = ((_local6 & 7) + h[("m" + _local7)]);
+								break;
+							};
+							_local7 = (_local6 & 15);
+							if (_local7 == 0){
+								_local4.d = B([6])[0];
+							} else {
+								if (_local7 == 1){
+									_local7 = B([18])[0];
+									h.d = _local7;
+									_local4.d = 0;
+								} else {
+									_local4.d = _local7;
+								};
+							};
+							if (!(_local6 & 16)){
+								break;
+							};
+						};
+					};
+					_local5.date = m(_local4.d);
+					for (_local7 in {
+						v:0,
+						d:0
+					}) {
+						if (!y(_local4[("x_" + _local7)])){
+							h[("l" + _local7)] = _local4[("x_" + _local7)];
+						};
+						if (y(_local4[("u_" + _local7)])){
+							_local4[("u_" + _local7)] = h[("l" + _local7)];
+						};
+					};
+					_local4.l_l = [_local4.u_d, _local4.u_d, _local4.u_d, _local4.u_d, _local4.u_v];
+					_local8 = g[(_local4.c & 15)];
+					if ((_local4.u_v & 1)){
+						_local8 = (31 - _local8);
+					};
+					if ((_local4.c & 16)){
+						_local4.l_l[4] = (_local4.l_l[4] + 2);
+					};
+					_local3 = 0;
+					while (_local3 < 5) {
+						if ((_local8 & (1 << (4 - _local3)))){
+							var _local9 = _local4.l_l;
+							var _local10 = _local3;
+							var _local11 = (_local9[_local10] + 1);
+							_local9[_local10] = _local11;
+						};
+						_local4.l_l[_local3] = (_local4.l_l[_local3] * 3);
+						_local3++;
+					};
+					_local4.d_v = B(_local4.l_l, [1, 0, 0, 1, 1], [0, 0, 0, 0, 1]);
+					_local7 = (h.cd + _local4.d_v[0]);
+					_local5.open = (_local7 / h.m);
+					_local5.high = ((_local7 + _local4.d_v[1]) / h.m);
+					_local5.low = ((_local7 - _local4.d_v[2]) / h.m);
+					_local5.close = ((_local7 + _local4.d_v[3]) / h.m);
+					_local6 = _local4.d_v[4];
+					if (typeof(_local6) == "number"){
+						_local6 = [_local6, (((_local6 >= 0)) ? 0 : -1)];
+					};
+					h.cd = (_local7 + _local4.d_v[3]);
+					_local8 = (h.cv[0] + _local6[0]);
+					h.cv = [(_local8 & r), ((h.cv[1] + _local6[1]) + !(!((((h.cv[0] & r) + (_local6[0] & r)) & f))))];
+					_local5.volume = ((h.cv[0] & (f - 1)) + (h.cv[1] * f));
+					_local1.push(_local5);
+				};
+				return (_local1);
+			};
+			c =  function(){
+				var _local1;
+				var _local2;
+				var _local3;
+				var _local4;
+				if (w > 1){
+					return ([]);
+				};
+				h.l = 0;
+				_local4 = -1;
+				h.d = (B([18])[0] - 1);
+				_local3 = B([18])[0];
+				while (h.d < _local3) {
+					_local2 = m(1);
+					if (_local4 <= 0){
+						if (d()){
+							h.l = (h.l + a());
+						};
+						_local4 = (B([(h.l * 3)], [0])[0] + 1);
+						if (!_local1){
+							_local1 = [_local2];
+							_local4--;
+						};
+					} else {
+						_local1.push(_local2);
+					};
+					_local4--;
+				};
+				return (_local1);
+			};
+			return (o()());
+		}
